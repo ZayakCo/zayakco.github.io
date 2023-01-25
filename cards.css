@@ -1,0 +1,239 @@
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('./Imgs/school.jpg');
+}
+
+.hero-cards {
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cards {
+    width: 90vw;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: var(--secondary);
+    width: 25%;
+    height: 75vh;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.best {
+    width: 30%;
+    height: 85vh;
+}
+
+.best > .pricing-info {
+    width: 100%;
+}
+
+.best::before {
+    content: 'MOST POPULAR';
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 20%;
+    padding-block: 5px;
+    position: absolute;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    transform: translateY(-50%);
+}
+
+.card-btn {
+    content: 'Purchase';
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 20%;
+    padding-block: 10px;
+    position: absolute;
+    background-color: #097969;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    transform: translateY(calc(75vh - 50%));
+    transition: all .25s;
+    outline: none;
+    border: none;
+}
+
+.best-btn {
+    content: 'Purchase';
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 20%;
+    padding-block: 10px;
+    position: absolute;
+    background-color: #097969;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    transform: translateY(calc(85vh - 50%));
+    transition: all .25s;
+    outline: none;
+    border: none;
+}
+
+.card-btn:hover, .best-btn:hover {
+    cursor: pointer;
+    background-color: #0d675a;
+}
+
+.pricing-info {
+    width: 22.5vw;
+    height: 20%;
+    border-radius: 15px 15px 0px 0px;
+    background-color: orange;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info-name {
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+
+.price {
+    font-weight: 500;
+    font-size: 1.35rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .cards {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .card {
+        width: 75%;
+        height: 90vh;
+        margin-block: 5vh;
+    }
+
+    .hero-cards {
+        height: calc(90vh * 3);
+        padding-block: 10vh;
+    }
+
+    .pricing-info {
+        width: 67.5vw;
+    }
+
+    .best::before {
+        width: 50%;
+    }
+
+    .card-btn, .best-btn {
+        width: 50%;
+        transform: translateY(calc(85vh - 150%));
+    }
+
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+
+    .cards {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .card {
+        width: 50%;
+        height: 60vh;
+        margin-block: 5vh;
+    }
+
+    .hero-cards {
+        height: calc(60vh * 3);
+        padding-block: 10vh;
+    }
+
+    .pricing-info {
+        width: 45vw;
+    }
+
+    .best::before {
+        width: 35%;
+    }
+
+    .card-btn, .best-btn {
+        width: 35%;
+        transform: translateY(calc(45vh + 75%));
+    }
+
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    flex: 1;
+    overflow-y: auto;
+    margin-inline: 10%;
+    margin-block: 15px;
+}
+
+.features > li {
+    display: flex;
+    padding-block: 5px;
+}
+
+.feature {
+    margin-right: auto;
+    width: 80%;
+}
+
+.has {
+    display: flex;
+    margin-left: auto;
+    width: 20% !important;
+    justify-content: flex-end;
+    aspect-ratio: 2/1;
+}
+
+.has > svg {
+    width: 40%;
+    aspect-ratio: 1/1;
+}
+
+#tick {
+    width: 45%;
+}
+
+.spec-li {
+    padding-top: 10%;
+    margin-top: 10%;
+    border-top: 1px solid var(--text);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    overflow-y: auto;
+    text-align: center;
+}
